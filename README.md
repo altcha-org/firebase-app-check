@@ -6,7 +6,7 @@ This repository provides a custom App Check provider implementation for Firebase
 
 ### 1. Install the Firebase extension
 
-Install the [ALTCHA App Check Provider](https://console.firebase.google.com/u/0/project/_/extensions/install?ref=altcha%2Faltcha-app-check-provider@0.0.4-alpha.0).
+Install the [ALTCHA App Check Provider](https://console.firebase.google.com/project/_/extensions/install?ref=altcha/altcha-app-check-provider@0.0.5-alpha.0).
 
 During the installation, configure your unique secret `HMAC Key` (a sufficiently long random string). You may adjust other configuration options, though the default values are usually sufficient.
 
