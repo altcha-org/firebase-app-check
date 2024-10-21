@@ -1,0 +1,59 @@
+{
+  "name": "@altcha/firebase-app-check",
+  "version": "0.0.1",
+  "description": "Firebase App Check provider.",
+  "author": {
+    "name": "Daniel Regeci",
+    "url": "https://altcha.org"
+  },
+  "homepage": "https://altcha.org",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/altcha-org/firebase-app-check"
+  },
+  "license": "MIT",
+  "keywords": [
+    "altcha",
+    "firebase",
+    "appcheck"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "rimraf dist && rimraf cjs/dist && tsc -b tsconfig.build.json tsconfig.cjs.json",
+    "eslint": "eslint ./lib/**/*",
+    "format": "prettier --write './(lib|tests)/**/*'",
+    "test": "vitest --run",
+    "prepare": "husky"
+  },
+  "files": [
+    "cjs",
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./cjs/dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^20.16.3",
+    "@typescript-eslint/eslint-plugin": "^8.4.0",
+    "eslint": "^8.57.0",
+    "husky": "^9.1.5",
+    "prettier": "^3.3.3",
+    "rimraf": "^5.0.10",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.4",
+    "vitest": "^1.6.0"
+  },
+  "dependencies": {
+    "altcha-lib": "^1.1.0",
+    "firebase": "^10.14.1"
+  }
+}
